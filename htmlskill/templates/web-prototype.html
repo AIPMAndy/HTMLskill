@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ brand or 'HTMLSkill Page' }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Huashu Design System Constraints */
+        * {
+            /* 8px baseline grid */
+            --grid-base: 8px;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        /* Component styles */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .hero { padding: 80px 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .section { padding: 80px 0; }
+        .grid { display: grid; gap: 32px; }
+        .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
+        .card { background: white; border-radius: 8px; padding: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 24px; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .footer { padding: 48px 24px; background: #f5f5f5; text-align: center; }
+        .btn { display: inline-block; padding: 12px 32px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.2s; }
+        .btn-primary { background: #667eea; color: white; }
+        .btn-primary:hover { background: #5568d3; }
+        .btn-secondary { background: #e2e8f0; color: #1a1a1a; }
+        .btn-secondary:hover { background: #cbd5e0; }
+    </style>
+</head>
+<body>
+    {% for component in components %}
+        {% if component.type == 'navbar' %}
+            <nav class="navbar">
+                {% if component.props.logo %}
+                    <div class="logo">
+                        <img src="{{ component.props.logo }}" alt="Logo" style="height: 32px;">
+                    </div>
+                {% endif %}
+                {% if component.props.links %}
+                    <div style="display: flex; gap: 24px;">
+                        {% for link in component.props.links %}
+                            <a href="#" style="color: #1a1a1a; text-decoration: none;">{{ link }}</a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </nav>
+
+        {% elif component.type == 'hero_start' %}
+            <div class="hero" style="background: {{ 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' if component.props.background == 'gradient' else component.props.background }};">
+                <div class="container">
+
+        {% elif component.type == 'hero_end' %}
+                </div>
+            </div>
+
+        {% elif component.type == 'container_start' %}
+            <div class="container" style="max-width: {{ component.props.max_width }};">
+
+        {% elif component.type == 'container_end' %}
+            </div>
+
+        {% elif component.type == 'section_start' %}
+            <div class="section" style="padding: {{ component.props.padding }};">
+
+        {% elif component.type == 'section_end' %}
+            </div>
+
+        {% elif component.type == 'grid_start' %}
+            <div class="grid grid-cols-{{ component.props.columns }}" style="gap: {{ component.props.gap }};">
+
+        {% elif component.type == 'grid_end' %}
+            </div>
+
+        {% elif component.type == 'card_start' %}
+            <div class="card">
+                {% if component.props.title %}
+                    <h3 style="margin: 0 0 16px 0; font-size: 20px; font-weight: 600;">{{ component.props.title }}</h3>
+                {% endif %}
+
+        {% elif component.type == 'card_end' %}
+            </div>
+
+        {% elif component.type == 'heading' %}
+            <h{{ component.props.level }} style="margin: 0 0 16px 0; text-align: {{ component.props.align }}; font-size: {{ 48 if component.props.level == 1 else 36 if component.props.level == 2 else 28 if component.props.level == 3 else 24 }}px; font-weight: 700;">
+                {{ component.props.text }}
+            </h{{ component.props.level }}>
+
+        {% elif component.type == 'text' %}
+            <p style="margin: 0 0 16px 0; font-size: {{ 20 if component.props.size == 'large' else 16 if component.props.size == 'medium' else 14 }}px; {% if component.props.color %}color: {{ component.props.color }};{% endif %}">
+                {{ component.props.content }}
+            </p>
+
+        {% elif component.type == 'button' %}
+            <button class="btn btn-{{ component.props.style }}" style="font-size: {{ 18 if component.props.size == 'large' else 16 if component.props.size == 'medium' else 14 }}px;">
+                {{ component.props.text }}
+            </button>
+
+        {% elif component.type == 'cta' %}
+            <a href="{{ component.props.url or '#' }}" class="btn btn-{{ component.props.style or 'primary' }}" style="font-size: 18px;">
+                {{ component.props.text }}
+            </a>
+
+        {% elif component.type == 'image' %}
+            <img src="{{ component.props.src }}" alt="{{ component.props.alt }}"
+                 {% if component.props.width %}width="{{ component.props.width }}"{% endif %}
+                 {% if component.props.height %}height="{{ component.props.height }}"{% endif %}
+                 style="max-width: 100%; height: auto;">
+
+        {% elif component.type == 'spacer' %}
+            <div style="height: {{ component.props.height }};"></div>
+
+        {% elif component.type == 'divider' %}
+            <hr style="border: none; border-top: {{ component.props.thickness }} solid {{ component.props.color }}; margin: 32px 0;">
+
+        {% elif component.type == 'features' %}
+            <div class="grid grid-cols-3" style="gap: 32px;">
+                {% for item in component.props.items %}
+                    <div class="card">
+                        <div style="font-size: 48px; margin-bottom: 16px;">{{ item.icon }}</div>
+                        <h3 style="margin: 0 0 8px 0; font-size: 20px; font-weight: 600;">{{ item.title }}</h3>
+                        <p style="margin: 0; color: #666;">{{ item.description }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+
+        {% elif component.type == 'footer' %}
+            <footer class="footer">
+                {% if component.props.copyright %}
+                    <p style="margin: 0;">{{ component.props.copyright }}</p>
+                {% endif %}
+                {% if component.props.links %}
+                    <div style="margin-top: 16px; display: flex; justify-content: center; gap: 24px;">
+                        {% for link in component.props.links %}
+                            <a href="#" style="color: #666; text-decoration: none;">{{ link }}</a>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </footer>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>
