@@ -227,7 +227,7 @@ print(f"Generated {len(ctx.components)} components")
 ## 📝 待推送到 GitHub
 
 ```bash
-cd /Users/andy/Desktop/04\ AICode/python-html-designer
+cd /Users/andy/Desktop/04\ AICode/HTMLskill
 git push -u origin main
 ```
 

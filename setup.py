@@ -6,7 +6,7 @@ setup(
     description="Python-first HTML generation framework with design system",
     author="Andy",
     author_email="your-email@example.com",
-    url="https://github.com/AIPMAndy/python-html-designer",
+    url="https://github.com/AIPMAndy/HTMLskill",
     packages=find_packages(),
     include_package_data=True,
     install_requires=[

@@ -37,8 +37,8 @@ ctx = landing_page()
 
 ```bash
 # Clone the repository
-git clone https://github.com/AIPMAndy/python-html-designer.git
-cd python-html-designer
+git clone https://github.com/AIPMAndy/HTMLskill.git
+cd HTMLskill
 
 # Install dependencies
 pip install -r requirements.txt

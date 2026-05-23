@@ -4,9 +4,9 @@
 
 ### 📦 项目信息
 
-- **项目名称**: HTMLSkill (python-html-designer)
-- **GitHub 仓库**: https://github.com/AIPMAndy/python-html-designer
-- **本地路径**: `/Users/andy/Desktop/04 AICode/python-html-designer`
+- **项目名称**: HTMLSkill (HTMLskill)
+- **GitHub 仓库**: https://github.com/AIPMAndy/HTMLskill
+- **本地路径**: `/Users/andy/Desktop/04 AICode/HTMLskill`
 - **当前版本**: v0.1.0-alpha
 - **许可证**: MIT
 
@@ -79,7 +79,7 @@
 由于网络问题，需要手动推送。请运行：
 
 ```bash
-cd /Users/andy/Desktop/04\ AICode/python-html-designer
+cd /Users/andy/Desktop/04\ AICode/HTMLskill
 
 # 推送到 GitHub
 git push -u origin main
@@ -159,7 +159,7 @@ print(f"Collected {len(ctx.components)} components")
 
 - **设计文档**: `/Users/andy/Desktop/04 AICode/docs/superpowers/specs/2026-05-23-htmlskill-design.md`
 - **实现计划**: `/Users/andy/Desktop/04 AICode/docs/superpowers/plans/2026-05-23-htmlskill-phase1.md`
-- **项目目录**: `/Users/andy/Desktop/04 AICode/python-html-designer`
+- **项目目录**: `/Users/andy/Desktop/04 AICode/HTMLskill`
 
 ---
 
