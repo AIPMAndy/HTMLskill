@@ -4,7 +4,12 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Status: Alpha](https://img.shields.io/badge/status-alpha-orange.svg)](https://github.com/AIPMAndy/HTMLskill)
+[![CI](https://github.com/AIPMAndy/HTMLskill/workflows/CI/badge.svg)](https://github.com/AIPMAndy/HTMLskill/actions)
+[![PyPI version](https://img.shields.io/pypi/v/htmlskill.svg)](https://pypi.org/project/htmlskill/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+
+**[Live Examples](https://aipmandty.github.io/HTMLskill/)** | **[Documentation](https://github.com/AIPMAndy/HTMLskill/tree/main/docs)** | **[Get Started in 60s](#-quick-start)**
 
 **HTMLskill** combines the simplicity of Python with professional design systems to generate production-ready HTML. No templates, no JSX, no build tools — just Python code that outputs beautiful web pages.
 
@@ -128,9 +133,9 @@ with hs.features(columns=3):           # Feature grid
 pip install htmlskill
 ```
 
-### 5-Minute Tutorial
+### 60-Second Tutorial
 
-**1. Create a simple landing page:**
+Create `my_page.py`:
 
 ```python
 import htmlskill as hs
