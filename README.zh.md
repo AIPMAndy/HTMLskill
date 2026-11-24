@@ -6,7 +6,7 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![CI](https://github.com/AIPMAndy/HTMLskill/workflows/CI/badge.svg)](https://github.com/AIPMAndy/HTMLskill/actions)
 
-**[在线示例](https://aipmandty.github.io/HTMLskill/)** | **[English README](README.md)** | **[文档](https://github.com/AIPMAndy/HTMLskill/tree/main/docs)**
+**[示例代码](./examples/)** | **[English README](README.md)** | **[文档](https://github.com/AIPMAndy/HTMLskill/tree/main/docs)**
 
 HTMLskill 将 Python 的简洁性与专业设计系统相结合，无需模板、无需构建工具——只需 Python 代码即可生成生产级 HTML 页面。
 
@@ -111,7 +111,7 @@ with hs.features(columns=3):
 ### 安装
 
 ```bash
-pip install htmlskill
+pip install git+https://github.com/AIPMAndy/HTMLskill.git
 ```
 
 ### 60 秒教程
