@@ -129,61 +129,21 @@ with hs.features(columns=3):           # Feature grid
 ### Installation
 
 ```bash
-pip install git+https://github.com/AIPMAndy/HTMLskill.git
+git clone https://github.com/AIPMAndy/HTMLskill.git
+cd HTMLskill
+python -m pip install -r requirements.txt
+python -m pip install -e .
 ```
 
 ### 60-Second Tutorial
 
-Create `my_page.py`:
-
-```python
-import htmlskill as hs
-
-@hs.page(mode="web", design_system="modern")
-def my_landing_page():
-    # Hero section
-    with hs.hero(gradient="blue"):
-        hs.heading("Build Faster with Python", level=1)
-        hs.text("No templates, no build tools, just Python code.")
-        hs.button("Get Started", href="/docs", variant="primary")
-    
-    # Features section
-    with hs.section(padding="xl"):
-        hs.heading("Why HTMLskill?", level=2, align="center")
-        with hs.features(columns=3):
-            hs.feature(
-                icon="🐍",
-                title="Python-First",
-                description="Write Python, get HTML. No context switching."
-            )
-            hs.feature(
-                icon="🎨",
-                title="Design System",
-                description="Professional design out of the box."
-            )
-            hs.feature(
-                icon="⚡",
-                title="Zero Build",
-                description="No Webpack, no Vite, just Python."
-            )
-
-# Render to HTML
-html = my_landing_page()
-print(html)
-```
-
-**2. Save to file:**
-
-```python
-with open("index.html", "w") as f:
-    f.write(html)
-```
-
-**3. Or use the CLI:**
+Run the included example from the repository root:
 
 ```bash
-htmlskill render my_page.py --output index.html
+python examples/00-minimal.py
 ```
+
+Open `examples/output/minimal.html` in a browser. The [landing-page example](./examples/02-complete-landing.py) shows how to build a fuller page.
 
 ---
 

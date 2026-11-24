@@ -111,69 +111,21 @@ with hs.features(columns=3):
 ### 安装
 
 ```bash
-pip install git+https://github.com/AIPMAndy/HTMLskill.git
+git clone https://github.com/AIPMAndy/HTMLskill.git
+cd HTMLskill
+python -m pip install -r requirements.txt
+python -m pip install -e .
 ```
 
 ### 60 秒教程
 
-**1. 创建一个简单的落地页：**
-
-```python
-import htmlskill as hs
-
-@hs.page(mode="web-prototype", design_system="huashu")
-def my_landing_page():
-    # 英雄区
-    with hs.hero(gradient="blue"):
-        hs.heading("用 Python 更快构建", level=1)
-        hs.text("无需模板，无需构建工具，只需 Python 代码。")
-        hs.button("开始使用", href="/docs", style="primary")
-    
-    # 功能区
-    with hs.section(padding="xl"):
-        hs.heading("为什么选择 HTMLskill？", level=2, align="center")
-        with hs.features(columns=3):
-            hs.feature(
-                icon="🐍",
-                title="Python 优先",
-                description="编写 Python，生成 HTML。无需切换上下文。"
-            )
-            hs.feature(
-                icon="🎨",
-                title="设计系统",
-                description="开箱即用的专业设计。"
-            )
-            hs.feature(
-                icon="⚡",
-                title="零构建",
-                description="无需 Webpack，无需 Vite，只需 Python。"
-            )
-
-# 渲染为 HTML
-from htmlskill.renderers.web import WebPrototypeRenderer
-
-ctx = my_landing_page()
-renderer = WebPrototypeRenderer()
-html = renderer.render(ctx)
-print(html)
-```
-
-**2. 保存到文件：**
-
-```python
-from pathlib import Path
-Path("index.html").write_text(html, encoding="utf-8")
-```
-
-**3. 在浏览器中打开：**
+在仓库根目录运行自带的示例：
 
 ```bash
-open index.html  # macOS
-xdg-open index.html  # Linux
-start index.html  # Windows
+python examples/00-minimal.py
 ```
 
-就是这样！您已经用 HTMLskill 生成了第一个 HTML 页面。
+在浏览器中打开 `examples/output/minimal.html`。[完整落地页示例](./examples/02-complete-landing.py) 演示了怎样组织更多页面内容。
 
 ---
 
