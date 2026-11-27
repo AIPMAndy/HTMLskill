@@ -1,0 +1,45 @@
+# HTMLskill
+
+> Python-first HTML generation framework with design system
+
+- 作者：AI酋长Andy（AIPMAndy），官网 https://metaver.vip/
+- 开源仓库：https://github.com/AIPMAndy/HTMLskill
+- 许可：MIT
+- 语言：中文（zh-CN）
+- 最近更新：2026-11-24
+
+## 这是什么
+
+Examples./examples/ | Documentationhttps://github.com/AIPMAndy/HTMLskill/tree/main/docs | Get Started in 60s#-quick-start
+HTMLskill combines the simplicity of Python with professional design systems to generate production-ready HTML. No templates, no JSX, no build tools — just Python code that outputs beautiful web pages.
+
+## 内容目录
+
+- Why HTMLskill?
+- Key Features
+- Quick Start
+- Use Cases
+- Architecture
+- Comparison with Alternatives
+- Roadmap
+- Contributing
+- License
+- Acknowledgments
+- Support
+- 作者 / About the author
+
+## 关键事实
+
+- 名称：HTMLskill
+- 类型：中文开源项目
+- 许可：MIT
+- 语言：中文
+- 最近更新：2026-11-24
+- 仓库：https://github.com/AIPMAndy/HTMLskill
+
+## 相关链接
+
+- [作者官网](https://metaver.vip/)
+- [GitHub 主页](https://github.com/AIPMAndy/AIPMAndy)
+- [开源总目录](https://aipmandy.github.io/)
+- [机器可读摘要](https://github.com/AIPMAndy/HTMLskill/blob/main/llms.txt)

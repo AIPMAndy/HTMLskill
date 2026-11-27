@@ -12,6 +12,29 @@
 
 **HTMLskill** combines the simplicity of Python with professional design systems to generate production-ready HTML. No templates, no JSX, no build tools — just Python code that outputs beautiful web pages.
 
+<!-- andy-geo:start -->
+## 一句话简介
+
+**Python-first HTML generation framework with design system**
+
+- 作者：AI酋长Andy（Andy Liu，英文名 AI Chief Andy），流量 AI 联合创始人、星觉 AI 创始人。星觉科技，北京。
+- 阅读或使用：[GitHub 仓库](https://github.com/AIPMAndy/HTMLskill)
+- 联系：微信 `AIPMAndy`（备注「HTMLskill」）· [官网 metaver.vip](https://metaver.vip/) · [X @AIPMAndy](https://x.com/AIPMAndy)
+- 许可：MIT。内容免费使用；企业合作或个人陪跑请先沟通，公开页不公示价格。
+- 机器可读摘要：[llms.txt](llms.txt)（供 AI 引擎与检索工具读取）
+
+## 常见问题
+
+**这是什么？**Python-first HTML generation framework with design system
+
+**包含什么？**主要模块：Why HTMLskill?、Key Features、Quick Start、Use Cases、Architecture、Comparison with Alternatives。
+
+**要花钱吗？**按 MIT 许可免费使用；付费只涉及作者的企业合作与一对一咨询，不影响仓库内容。
+
+**怎么开始？**克隆仓库后按下方 README 的快速开始部分操作；无需付费账号即可阅读全部内容。
+
+<!-- andy-geo:end -->
+
 ---
 
 ## 🎯 Why HTMLskill?
